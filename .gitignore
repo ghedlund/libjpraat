@@ -41,3 +41,4 @@ darwin/
 *.dylib
 *.dll
 *.jar
+.claude/
