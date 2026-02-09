@@ -31,6 +31,7 @@
 	#include <windows.h>
 	#include <fcntl.h>
 	#include <io.h>
+	#include <process.h>
 #endif
 
 #include "praatP.h"
@@ -1189,7 +1190,11 @@ static bool tryToSwitchToRunningPraat (bool foundTheOpenOption, bool foundTheSen
 		If there are doubts anywhere, then we just return false,
 		because having zero instances of Praat is worse than having two.
 	*/
-	const integer pidOfCurrentPraat = getpid ();
+	#if defined (_WIN32)
+		const integer pidOfCurrentPraat = _getpid ();
+	#else
+		const integer pidOfCurrentPraat = getpid ();
+	#endif
 	if (pidOfCurrentPraat == 0) {
 		trace (U"We have no PID, so we will not be able to check that we are different from any running Praat.");
 		return false;

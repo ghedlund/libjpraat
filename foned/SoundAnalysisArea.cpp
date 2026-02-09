@@ -26,6 +26,7 @@
 #include "VoiceAnalysis.h"
 #include "EditorM.h"
 #include "praat_script.h"
+#include <ctime>
 
 Thing_implement (SoundAnalysisArea, FunctionArea, 0);
 

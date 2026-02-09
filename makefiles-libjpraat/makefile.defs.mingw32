@@ -1,8 +1,8 @@
 # File: makefile.defs.mingw32
 # System: MinGW
 
-CC = /mingw32/bin/gcc -std=gnu99 -isystem /mingw32/include
-CXX = /mingw32/bin/g++ -std=gnu++0x -isystem /mingw32/include/c++/4.7.0 -isystem /mingw32/include -Wshadow
+CC = /mingw32/bin/gcc -std=gnu99 
+CXX = /mingw32/bin/g++ -std=gnu++0x -Wshadow
 LINK = /mingw32/bin/g++
 AR = /mingw32/bin/ar
 RANLIB = /mingw32/bin/ranlib
